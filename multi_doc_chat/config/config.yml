@@ -1,0 +1,26 @@
+embedding_model:
+  google:
+    provider: "google"
+    model_name: "models/gemini-embedding-001"
+  ollama:
+    provider: "ollama"
+    model_name: "nomic-embed-text"
+
+retriever:
+  top_k: 10
+  search_type: "mmr"
+  fetch_k: 20
+  lambda_mult: 0.5
+
+llm:
+  groq:
+    provider: "groq"
+    model_name: "llama-3.3-70b-versatile"
+    temperature: 0
+    max_output_tokens: 2048
+
+  google:
+    provider: "google"
+    model_name: "gemini-2.5-flash-lite"
+    temperature: 0
+    max_output_tokens: 2048
